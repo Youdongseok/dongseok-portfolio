@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #dde1e7;
+  --card: #fbfbfd;
+  --ink: #1b2233;
+  --muted: #7c8198;
+  --soft: #eef0f6;
+  --line: #d6d9e4;
+  --indigo: #4453c4;
+  --indigo-soft: #dfe3fa;
+  --orange: #f97e56;
+  --peach: #fbe1d6;
+  --blush: #e9deeb;
+  --mauve: #a472b0;
+  --art-bg: #e6e9ef;
+  --surface: #ffffff;
+  --on-ink: #ffffff;
+  --text-2: #2d3348;
+  --pin: #1b2233;
+  --glass: linear-gradient(160deg, rgba(255, 255, 255, 0.62), rgba(233, 222, 235, 0.45));
+  --glass-line: rgba(255, 255, 255, 0.75);
+  --shadow: rgba(27, 34, 51, 0.18);
+  --glow: rgba(68, 83, 196, 0.14);
+  --grad: linear-gradient(135deg, var(--indigo) 0%, #8a6fc4 50%, var(--orange) 100%);
+  --page-bg: radial-gradient(60% 50% at 50% 30%, rgba(68, 83, 196, 0.08), transparent 70%),
+    radial-gradient(40% 40% at 55% 80%, rgba(249, 126, 86, 0.08), transparent 70%),
+    var(--bg);
+  --display: "Space Grotesk", system-ui, sans-serif;
+  --body: "Poppins", system-ui, sans-serif;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #090c16;
+  --card: #11152a;
+  --ink: #e8eaf6;
+  --on-ink: #11152a;
+  --muted: #8b90ab;
+  --soft: #1a1f38;
+  --line: #272d4a;
+  --indigo: #7f8cf7;
+  --indigo-soft: #252c5c;
+  --orange: #ff8a62;
+  --peach: #4b2a2b;
+  --blush: #33284a;
+  --mauve: #c08ad0;
+  --art-bg: #161b36;
+  --surface: #1d2340;
+  --text-2: #c3c7dc;
+  --glass: linear-gradient(160deg, rgba(20, 25, 48, 0.72), rgba(51, 40, 74, 0.55));
+  --glass-line: rgba(127, 140, 247, 0.22);
+  --shadow: rgba(0, 0, 0, 0.6);
+  --glow: rgba(127, 140, 247, 0.18);
+  --grad: linear-gradient(135deg, var(--indigo) 0%, #b08ae0 50%, var(--orange) 100%);
+  color-scheme: dark;
+}
+
+@keyframes sonar {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sonar-pulse {
+    animation: none !important;
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}

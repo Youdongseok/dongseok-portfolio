@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#dde1e7" />
+  <link rel="icon" type="image/png" href="/images/my-profile.png" />
+  <title>FE Developer | YU Dongseok</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Poppins:wght@300;400;500&family=Space+Grotesk:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <script>
+    (() => {
+      let saved = null
+      try { saved = localStorage.getItem('theme') } catch (e) { }
+      const systemTheme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      document.documentElement.dataset.theme = saved === 'dark' || saved === 'light' ? saved : systemTheme
+    })()
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
