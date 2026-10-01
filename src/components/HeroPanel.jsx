@@ -1,5 +1,4 @@
 import ArrowIcon from './ArrowIcon.jsx';
-import PixelArt from './PixelArt.jsx';
 
 const glassClass =
   'border border-[var(--glass-line)] [background:var(--glass)] shadow-[0_10px_30px_-8px_rgba(68,83,196,.22)] backdrop-blur-[14px] backdrop-saturate-[1.4]';
@@ -83,7 +82,7 @@ export default function HeroPanel() {
               className="h-[26px] w-14 rounded-full bg-cover [background-position:50%_48%] [background-size:260%_auto]"
               style={{ backgroundImage: 'url(/images/hero.png)' }}
             />
-            <PixelArt type="mosaic" className="relative h-[26px] w-14 rounded-full" />
+            <span className="h-[26px] w-14 rounded-full bg-[var(--art-bg)]" />
             <button className="grid h-[26px] w-[58px] place-items-center rounded-full bg-[var(--surface)] text-[17px] font-light text-[var(--indigo)]">
               +
             </button>

@@ -53,16 +53,21 @@ export function useIntroAnimation(scopeRef) {
       { ...pop, delay: 0.8 }
     );
 
-    const [ringA, ringB] = $$('.twin i, .twin [data-art]');
+    const [ringA, ringB] = $$('.twin i');
     if (ringA) run(ringA, { opacity: [0, 1], x: [-12, 0] }, { duration: 0.7, delay: 0.95, ease });
     if (ringB) run(ringB, { opacity: [0, 1], x: [18, 0], scale: [0.5, 1] }, { ...pop, delay: 1.0 });
 
     run($('.divider'), { opacity: [0, 1], scaleX: [0, 1] }, { duration: 1, delay: 0.75, ease });
-    run($('.lead'), { opacity: [0, 1], y: [12, 0] }, { duration: 0.8, delay: 0.9, ease });
+    run(
+      $$('.lead-title span'),
+      { opacity: [0, 1], y: [12, 0], filter: ['blur(4px)', 'blur(0px)'] },
+      { duration: 0.7, delay: stagger(0.08, { startDelay: 0.86 }), ease }
+    );
+    run($('.lead'), { opacity: [0, 1], y: [12, 0] }, { duration: 0.8, delay: 1.05, ease });
     run(
       $$('.cta .btn'),
       { opacity: [0, 1], y: [14, 0], scale: [0.85, 1] },
-      { ...pop, delay: stagger(0.08, { startDelay: 1.05 }) }
+      { ...pop, delay: stagger(0.08, { startDelay: 1.2 }) }
     );
 
     run($('.promo p'), { opacity: [0, 1], y: [10, 0] }, { duration: 0.7, delay: 1.15, ease });
@@ -123,39 +128,39 @@ export function useIntroAnimation(scopeRef) {
     );
 
     run($('.search'), { opacity: [0, 1], scaleX: [0.4, 1] }, { duration: 0.9, delay: 0.35, ease });
-    run($('.avatar'), { opacity: [0, 1], scale: [0, 1] }, { ...pop, delay: 0.5 });
     run(
       $('.theme-toggle'),
       { opacity: [0, 1], scale: [0, 1], rotate: [-180, 0] },
       { ...pop, delay: 0.45 }
     );
+
+    run(
+      $('.orbit .ring'),
+      { opacity: [0, 1], rotate: [-140, 0], scale: [0.8, 1] },
+      { duration: 1.1, delay: 0.65, ease }
+    );
+    run($('.orbit .pic'), { opacity: [0, 1], scale: [0.5, 1] }, { ...pop, delay: 0.8 });
+    run(
+      $$('.orbit .tag'),
+      { opacity: [0, 1], x: [14, 0] },
+      { duration: 0.6, delay: stagger(0.12, { startDelay: 0.95 }), ease }
+    );
+
     run(
       $$('.plans > [data-a]'),
       { opacity: [0, 1], x: [26, 0] },
-      { duration: 0.7, delay: stagger(0.08, { startDelay: 0.6 }), ease }
+      { duration: 0.7, delay: stagger(0.08, { startDelay: 1.35 }), ease }
     );
 
-    run($('.stats'), { opacity: [0, 1], y: [22, 0] }, { duration: 0.8, delay: 0.9, ease });
+    run($('.stats'), { opacity: [0, 1], y: [22, 0] }, { duration: 0.8, delay: 1.65, ease });
     $$('.bar i').forEach((bar, index) => {
       const targetHeight = `${bar.dataset.height}%`;
       run(
         bar,
         { height: ['0%', targetHeight] },
-        { type: 'spring', stiffness: 120, damping: 14, delay: 1.15 + index * 0.08 }
+        { type: 'spring', stiffness: 120, damping: 14, delay: 1.85 + index * 0.08 }
       );
     });
-
-    run(
-      $('.orbit .ring'),
-      { opacity: [0, 1], rotate: [-140, 0], scale: [0.8, 1] },
-      { duration: 1.3, delay: 1.2, ease }
-    );
-    run($('.orbit .pic'), { opacity: [0, 1], scale: [0.5, 1] }, { ...pop, delay: 1.4 });
-    run(
-      $$('.orbit .tag'),
-      { opacity: [0, 1], x: [14, 0] },
-      { duration: 0.6, delay: stagger(0.12, { startDelay: 1.6 }), ease }
-    );
 
     $$('[data-count]').forEach(el => {
       const to = Number.parseFloat(el.dataset.count);

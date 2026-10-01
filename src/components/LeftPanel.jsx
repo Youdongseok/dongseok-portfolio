@@ -1,11 +1,7 @@
-import PixelArt from './PixelArt.jsx';
-
 export default function LeftPanel() {
   return (
     <section className="left flex flex-col pt-0.5">
       <div className="flex items-center justify-between">
-        
-
         {/* <button
           className="menu flex items-center gap-2 rounded-full border-[1.5px] border-[var(--ink)] bg-[var(--surface)] py-0.5 pl-0.5 pr-3 text-[13px]"
           data-a
@@ -28,33 +24,25 @@ export default function LeftPanel() {
         </button> */}
       </div>
 
-      <h1 className="hero-title mt-[110px] text-[36.5px] font-normal uppercase leading-[1.24] tracking-[-0.3px] [font-family:var(--display)] max-[1100px]:mt-14 max-[720px]:text-[30px]">
+      <h1 className="hero-title text-[36.5px] font-normal uppercase leading-[1.24] tracking-[-0.3px] [font-family:var(--display)] max-[720px]:text-[30px]">
         <span className="row flex items-center gap-2 whitespace-nowrap" data-a>
-          Grow{' '}
-          <span
-            className="hl ml-0.5 inline-block rotate-[-3deg] rounded-[22px] px-3 pl-2.5 [background:linear-gradient(100deg,var(--indigo-soft)_0%,var(--blush)_55%,var(--peach)_100%)]"
-            data-a
-          >
-            Your
-          </span>
+          FRONTEND{' '}
         </span>
         <span className="row flex items-center gap-2 whitespace-nowrap" data-a>
-          Money with{' '}
+          DEVELOPER
           <span className="twin ml-1 inline-flex shrink-0 items-center">
             <i
               className="block size-[30px] shrink-0 rounded-full border-[1.5px] border-[var(--indigo)]"
               data-a
             />
-            <PixelArt
-              type="mosaic"
-              as="i"
-              className="relative -ml-3.5 block size-[30px] shrink-0 rounded-full border-2 border-[var(--card)]"
+            <i
+              className="-ml-3.5 block size-[30px] shrink-0 rounded-full border-2 border-[var(--card)] bg-[var(--art-bg)]"
               data-a
             />
           </span>
         </span>
         <span className="row flex items-center gap-2 whitespace-nowrap" data-a>
-          Conviction
+          유동석
         </span>
       </h1>
 
@@ -62,11 +50,17 @@ export default function LeftPanel() {
         className="divider my-4 mt-[26px] h-px origin-left [background:linear-gradient(90deg,var(--indigo)_0%,var(--line)_45%)]"
         data-a
       />
-
+      <div className="lead-title mb-2 text-[var(--indigo)]">
+        <span className="block" data-a>
+          개발은 결과물이 아니라
+        </span>
+        <span className="block" data-a>
+          과정 그 자체의 즐거움입니다.
+        </span>
+      </div>
       <p className="lead max-w-[240px] text-[12.5px] leading-[1.38] text-[var(--text-2)]" data-a>
-        <span className="text-[var(--indigo)]">• //</span>
-        With research-driven portfolios and disciplined risk management, your capital is built to
-        compound
+단순히 만드는 것에 그치지 않고, 과정의 의미와 결과의 가치를 중요하게 생각합니다.
+주인의식을 가지고 끝까지 책임지며, 더 나은 개발자가 되기 위해 꾸준히 배우고 만들어갑니다.
       </p>
 
       <div className="cta mt-[38px] flex gap-4">
@@ -113,16 +107,15 @@ export default function LeftPanel() {
           Start building your portfolio with PillarCap today
         </p>
         <div className="flex items-center gap-3">
-          <PixelArt
-            type="columns"
-            className="promo-img relative h-[70px] w-[175px] rounded-lg"
+          <div
+            className="promo-img relative h-[70px] w-[175px] rounded-lg bg-[var(--art-bg)]"
             data-a
           >
             <span
               className="absolute -right-px -top-px z-[1] h-6 w-[34px] rounded-bl-[10px] bg-[var(--card)]"
               aria-hidden="true"
             />
-          </PixelArt>
+          </div>
           <div className="promo-nav flex items-center">
             <a
               href="#"
