@@ -1,13 +1,13 @@
-import { useRef } from 'react'
-import HeroPanel from './components/HeroPanel.jsx'
-import LeftPanel from './components/LeftPanel.jsx'
-import RightPanel from './components/RightPanel.jsx'
-import { useIntroAnimation } from './hooks/useIntroAnimation.js'
+import { useRef } from 'react';
+import HeroPanel from './components/HeroPanel.jsx';
+import LeftPanel from './components/LeftPanel.jsx';
+import RightPanel from './components/RightPanel.jsx';
+import { useIntroAnimation } from './hooks/useIntroAnimation.js';
 
 export default function App() {
-  const pageRef = useRef(null)
+  const pageRef = useRef(null);
 
-  useIntroAnimation(pageRef)
+  useIntroAnimation(pageRef);
 
   return (
     <div className="grid min-h-screen w-full place-items-center px-4 py-10 text-[var(--ink)] transition-colors duration-500 [background:var(--page-bg)] [font-family:var(--body)] max-[720px]:p-0">
@@ -20,5 +20,5 @@ export default function App() {
         <RightPanel />
       </main>
     </div>
-  )
+  );
 }

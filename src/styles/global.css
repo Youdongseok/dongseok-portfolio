@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --bg: #dde1e7;
@@ -23,15 +23,15 @@
   --shadow: rgba(27, 34, 51, 0.18);
   --glow: rgba(68, 83, 196, 0.14);
   --grad: linear-gradient(135deg, var(--indigo) 0%, #8a6fc4 50%, var(--orange) 100%);
-  --page-bg: radial-gradient(60% 50% at 50% 30%, rgba(68, 83, 196, 0.08), transparent 70%),
-    radial-gradient(40% 40% at 55% 80%, rgba(249, 126, 86, 0.08), transparent 70%),
-    var(--bg);
-  --display: "Space Grotesk", system-ui, sans-serif;
-  --body: "Poppins", system-ui, sans-serif;
+  --page-bg:
+    radial-gradient(60% 50% at 50% 30%, rgba(68, 83, 196, 0.08), transparent 70%),
+    radial-gradient(40% 40% at 55% 80%, rgba(249, 126, 86, 0.08), transparent 70%), var(--bg);
+  --display: 'Space Grotesk', system-ui, sans-serif;
+  --body: 'Poppins', system-ui, sans-serif;
   color-scheme: light;
 }
 
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   --bg: #090c16;
   --card: #11152a;
   --ink: #e8eaf6;
